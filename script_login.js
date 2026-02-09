@@ -1,30 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const togglePassword = document.querySelector('#togglePassword');
-    const passwordField = document.querySelector('#password');
-    const loginForm = document.querySelector('#loginForm');
-
-    
-    if (togglePassword && passwordField) {
-        togglePassword.addEventListener('click', function() {
-            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordField.setAttribute('type', type);
-            this.classList.toggle('fa-eye');
-            this.classList.toggle('fa-eye-slash');
-        });
-    }
+    const loginForm = document.getElementById('loginForm');
 
     if (loginForm) {
         loginForm.addEventListener('submit', function(e) {
-            e.preventDefault(); 
+            e.preventDefault();
             
-            const email = document.querySelector('#email').value;
-            const pass = document.querySelector('#password').value;
+            const emailInput = document.querySelector('#email');
+            const passwordInput = document.querySelector('#password');
 
-            if (email && pass) {
-                window.location.href = 'index.html';
+            if (emailInput.value && passwordInput.value) {
+                window.location.href = 'vitrine.html'; 
             } else {
-                alert("Por favor, preencha todos os campos para testar o acesso.");
+                alert("Por favor, preencha todos os campos.");
             }
         });
+    } else {
+        console.error("Erro: O formulário com ID 'loginForm' não foi encontrado.");
     }
 });
