@@ -1,102 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BiblioXchange - Vitrine</title>
-  <link rel="stylesheet" href="main.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="icon" href="Media/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiblioXchange - Login</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="Media/favicon.ico" type="image/x-icon">
 </head>
-
 <body>
-  <header class="header">
-    <div class="header-left">
-      <a href="index.html" class="home-link"><i class="fa-solid fa-house"  style="font-size: 2rem; color: white;"></i></a>
+    <div class="page">
+        <form id="loginForm" method="POST" class="formLogin">
+            <h1>Login</h1>
+            <p>Digite os seus dados de acesso no campo abaixo.</p>
+            
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail" required autofocus />
+            
+            <label for="password">Senha</label>
+            <div class="password-container">
+                <input type="password" id="password" placeholder="Digite sua senha" required />
+                <i class="fa fa-eye" id="togglePassword"></i>
+            </div>
+            
+            <a href="#">Esqueci minha senha</a>
+            <input type="submit" value="Acessar" class="btn" />
+        </form>
     </div>
-
-    <div class="header-center">
-      <h1 class="brand-title">BiblioXchange</h1>
-      <div class="search-bar">
-        <input type="text" placeholder="Busque por livro, autor, gênero..." />
-        <button><i class="fa-solid fa-magnifying-glass"></i></button>
-      </div>
-    </div>
-
-    <div class="header-right">
-      <div class="user-icon">
-        <i class="fas fa-user-circle" id="profileIcon"></i>
-        <div class="dropdown-menu" id="dropdownMenu">
-          <a href="#">Minha Conta</a>
-          <a href="#">Meus Livros</a>
-          <a href="login.html">Sair</a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <section class="books">
-    <h2>Livros disponíveis para troca por perto</h2>
-    <div class="book-grid">
-      <div class="book">
-        <img src="Media/251-lady-killers.webp" alt="book" />
-        <p>Lady Killers</p>
-        <a href="Livros/livro1.html"><button>Saiba Mais</button></a>
-      </div>
-      <div class="book">
-        <img src="Media/711lRhyTjIL._AC_UF1000,1000_QL80_.jpg" alt="book" />
-        <p>Felicidade Clandestina</p>
-        <a href="Livros/livro2.html"><button>Saiba Mais</button></a>
-      </div>
-      <div class="book">
-        <img src="Media/716EGgqzyOL.jpg" alt="book" />
-        <p>One Piece vol.1</p>
-        <a href="Livros/livro3.html"><button>Saiba Mais</button></a>
-      </div>
-      <div class="book">
-        <img src="Media/71fEYN72-UL.jpg" alt="book" />
-        <p>Amanhecer na Colheita</p>
-        <a href="Livros/livro4.html"><button>Saiba Mais</button></a>
-      </div>
-      <div class="book">
-        <img src="Media/71K4OH9CqOL._UF894,1000_QL80_.jpg" alt="book" />
-        <p>Moby Dick</p>
-        <a href="Livros/livro5.html"><button>Saiba Mais</button></a>
-      </div>
-      <div class="book">
-        <img src="Media/71OL9RU2tJL._AC_UF1000,1000_QL80_.jpg" alt="book" />
-        <p>Memórias Póstumas de Brás Cubas</p>
-        <a href="Livros/livro6.html"><button>Saiba Mais</button></a>
-      </div>
-      <div class="book">
-        <img src="Media/71pw2IDO+7L.jpg" alt="book" />
-        <p>Vou te receitar um gato</p>
-        <a href="Livros/livro7.html"><button>Saiba Mais</button></a>
-      </div>
-      <div class="book">
-        <img src="Media/81Gs9SEdkQL.jpg" alt="book" />
-        <p>Todas as flores que não te enviei</p>
-        <a href="Livros/livro8.html"><button>Saiba Mais</button></a>
-      </div>
-      <div class="book">
-        <img src="Media/81w4T-9uGKL._AC_UF1000,1000_QL80_.jpg" alt="book" />
-        <p>Os Poderosos Vingadores</p>
-        <a href="Livros/livro9.html"><button>Saiba Mais</button></a>
-      </div>
-      <div class="book">
-        <img src="Media/page_1_thumb_large.webp" alt="book" />
-        <p>Bom dia Verônica</p>
-        <a href="Livros/livro10.html"><button>Saiba Mais</button></a>
-      </div>
-      <div class="book">
-        <img src="Media/a blioteca.jpg" alt="book" />
-        <p>A Biblioteca da Meia-Noite</p>
-        <a href="Livros/livro11.html"><button>Saiba Mais</button></a>
-      </div>
-    </div>
-  </section>
-
-  <script src="script.js"></script>
+    <script src="script_login.js"></script>
 </body>
 </html>
